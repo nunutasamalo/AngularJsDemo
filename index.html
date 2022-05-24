@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"></script>
+  </head>
+  <body ng-app="RegResApp" style="padding: 10px; background-color: #f7f7f7">
+    <div ng-controller="usersController">
+      <table class="table table-condensed" style="width: 500px">
+        <tr ng-repeat="user in users.data">
+          <td>{{user.first_name}}</td>
+          <td>{{user.last_name}}</td>
+          <td>{{user.email}}</td>
+          <td><img ng-src="{{user.avatar}}" /></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/services.js"></script>
+</html>
